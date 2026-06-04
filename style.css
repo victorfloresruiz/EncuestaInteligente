@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 18px;
+    color: #222;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 24px;
+}
+
+header p {
+    font-size: 12px;
+    color: #888;
+    margin: 3px 0 0 0;
+}
+
+h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Layout principal */
+.contenedor {
+    display: flex;
+    gap: 20px;
+    padding: 20px 24px;
+    max-width: 1100px;
+}
+
+/* Tarjetas */
+.formulario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 280px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+
+.panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* Formulario */
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+}
+
+.mensaje-ok {
+    color: green;
+    font-size: 13px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Filtro */
+.fila-filtro {
+    margin-bottom: 6px;
+}
+
+.fila-filtro label {
+    margin-top: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.fila-filtro select {
+    width: auto;
+    min-width: 180px;
+}
+
+.info-filtro {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+/* KPIs */
+.kpis {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.kpi {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 14px;
+    flex: 1;
+}
+
+.kpi p {
+    margin: 0 0 4px 0;
+    font-size: 11px;
+    color: #888;
+}
+
+.kpi span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Barras */
+.barra-fila {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.barra-fila p {
+    margin: 0;
+    width: 75px;
+    color: #666;
+}
+
+.barra-fondo {
+    background-color: #e8edf2;
+    border-radius: 4px;
+    height: 14px;
+    flex: 1;
+}
+
+.barra-relleno {
+    background-color: #3b82f6;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.barra-fila span {
+    width: 20px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Comparativa */
+.comp-fila {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.comp-fila p {
+    margin: 0;
+    width: 130px;
+    color: #666;
+}
+
+.comp-fila p.seleccionado {
+    color: #222;
+    font-weight: bold;
+}
+
+.comp-fondo {
+    background-color: #e8edf2;
+    border-radius: 4px;
+    height: 16px;
+    flex: 1;
+}
+
+.comp-relleno {
+    background-color: #3b82f6;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.comp-fila span {
+    width: 45px;
+    text-align: right;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Respuestas */
+.respuesta {
+    border-left: 3px solid #3b82f6;
+    background-color: #f8fafc;
+    border-radius: 0 6px 6px 0;
+    padding: 9px 12px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.respuesta .grupo-badge {
+    font-size: 11px;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+.respuesta .puntuacion {
+    font-weight: bold;
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+.respuesta .comentario {
+    color: #666;
+    margin: 2px 0 0 0;
+}
+
+.sin-respuestas {
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+}

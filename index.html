@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1665 - Encuesta de aula</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>M1665 – Proyecto 2 (v0 local con arrays)</h1>
+    <p>Prototipo inicial con "BD simulada" en memoria. Punto de partida para evolucionar hacia Supabase + Vercel.</p>
+</header>
+
+<div class="contenedor">
+
+    <!-- Formulario -->
+    <div class="formulario">
+        <h2>Formulario de encuesta</h2>
+
+        <label for="grupo">Grupo:</label>
+        <select id="grupo">
+            <option value="DAW1A">DAW1A</option>
+            <option value="DAW1B">DAW1B</option>
+            <option value="ASIX1">ASIX1</option>
+        </select>
+
+        <label for="puntuacion">Satisfacción global (1-5):</label>
+        <input type="number" id="puntuacion" min="1" max="5" placeholder="Escribe un número del 1 al 5">
+        <p class="error" id="error"></p>
+
+        <label for="comentario">Comentario (opcional):</label>
+        <textarea id="comentario" placeholder="¿Qué mejorarías de la sesión?"></textarea>
+
+        <button onclick="guardarRespuesta()">Guardar respuesta</button>
+        <p class="mensaje-ok" id="mensaje-ok">✓ Respuesta guardada correctamente!</p>
+    </div>
+
+    <!-- Panel de analítica -->
+    <div class="panel">
+        <h2>Panel de analítica</h2>
+
+        <div class="fila-filtro">
+            <label for="filtro">Filtro del panel:</label>
+            <select id="filtro" onchange="actualizarPanel()">
+                <option value="TODOS">TODOS</option>
+                <option value="DAW1A">DAW1A</option>
+                <option value="DAW1B">DAW1B</option>
+                <option value="ASIX1">ASIX1</option>
+            </select>
+        </div>
+        <p class="info-filtro" id="info-filtro"></p>
+
+        <!-- KPIs -->
+        <div class="kpis">
+            <div class="kpi">
+                <p>Respuestas</p>
+                <span id="kpi-total">0</span>
+            </div>
+            <div class="kpi">
+                <p>Media</p>
+                <span id="kpi-media">-</span>
+            </div>
+            <div class="kpi">
+                <p>% 4 o 5</p>
+                <span id="kpi-positivas">-</span>
+            </div>
+            <div class="kpi">
+                <p>Grupo analizado</p>
+                <span id="kpi-grupo" style="font-size: 14px;">-</span>
+            </div>
+        </div>
+
+        <!-- Gráfico de barras -->
+        <h3>Distribución de valoraciones</h3>
+        <div id="grafico-barras"></div>
+
+        <!-- Comparativa por grupo -->
+        <h3>Comparativa de media por grupo</h3>
+        <div id="grafico-comparativa"></div>
+
+        <!-- Lista de respuestas -->
+        <h3>Últimas respuestas</h3>
+        <div id="lista-respuestas"></div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
